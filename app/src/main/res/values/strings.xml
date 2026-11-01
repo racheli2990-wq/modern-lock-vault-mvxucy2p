@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">נעילת מסך חכמה</string>
+    <string name="lock_now">נעל מסך עכשיו</string>
+    <string name="screen_preview">תצוגת מסך נעילה</string>
+    <string name="security_type">סוג אבטחה</string>
+    <string name="security_pin">קוד סודי (PIN)</string>
+    <string name="security_pattern">תבנית (Pattern)</string>
+    <string name="security_swipe">החלקה בלבד</string>
+    <string name="security_bio">טביעת אצבע וירטואלית</string>
+    <string name="change_pin">שינוי קוד סודי</string>
+    <string name="clock_style">סגנון שעון</string>
+    <string name="clock_modern">מודרני ונקי</string>
+    <string name="clock_digital">דיגיטלי גדול</string>
+    <string name="clock_compact">קומפקטי עדין</string>
+    <string name="wallpapers">ערכת רקע</string>
+    <string name="wp_midnight">חצות עמוק</string>
+    <string name="wp_neon">נאון עתידני</string>
+    <string name="wp_sunset">שקיעה זוהרת</string>
+    <string name="wp_minimal">שחור מינימליסטי</string>
+    <string name="show_notifications">הצג התראות במסך נעילה</string>
+    <string name="vibration_feedback">רטט במשוב הקשה</string>
+    <string name="emergency_contact">איש קשר לחירום</string>
+    <string name="enter_pin">הקש קוד נעילה</string>
+    <string name="draw_pattern">צייר תבנית לשחרור</string>
+    <string name="swipe_to_unlock">החלק למעלה לפתיחה</string>
+    <string name="tap_fingerprint">גע בחיישן לפתיחה מהירה</string>
+    <string name="wrong_pin">קוד שגוי, נסה שוב</string>
+    <string name="wrong_pattern">תבנית שגויה</string>
+    <string name="unlocked">המסך נפתח בהצלחה!</string>
+    <string name="emergency">חירום</string>
+    <string name="delete">מחק</string>
+    <string name="cancel">ביטול</string>
+    <string name="settings">הגדרות נעילה מתקדמות</string>
+    <string name="lock_sound">צליל נעילה ושחרור</string>
+</resources>

@@ -1,0 +1,284 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_main"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ניהול אבטחה, שעונים וסגנונות מתקדמים"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:layout_marginTop="3dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+
+        <!-- Primary Launch Lock Screen Button -->
+        <Button
+            android:id="@+id/btnLaunchLock"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_primary_rounded"
+            android:text="@string/lock_now"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="6dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Security Mode Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="18dp"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/security_type"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSecurity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_pin"
+                    android:textColor="@color/text_main"
+                    android:padding="6dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbPattern"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_pattern"
+                    android:textColor="@color/text_main"
+                    android:padding="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rbSwipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_swipe"
+                    android:textColor="@color/text_main"
+                    android:padding="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rbBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_bio"
+                    android:textColor="@color/text_main"
+                    android:padding="6dp" />
+            </RadioGroup>
+
+            <!-- Set PIN section -->
+            <LinearLayout
+                android:id="@+id/layoutPinConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:paddingTop="12dp">
+
+                <EditText
+                    android:id="@+id/etPinCode"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:hint="קוד חדש (4 ספרות)"
+                    android:textColor="@color/text_main"
+                    android:textColorHint="@color/text_muted"
+                    android:gravity="center"
+                    android:background="@drawable/bg_card_rounded"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnSavePin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/btn_primary_rounded"
+                    android:text="שמור קוד"
+                    android:textColor="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Customization Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="18dp"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clock_style"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerClock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_card_rounded"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallpapers"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerWallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_card_rounded"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <!-- Switches & Extras Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="18dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <Switch
+                android:id="@+id/switchNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show_notifications"
+                android:textColor="@color/text_main"
+                android:textSize="15sp"
+                android:checked="true"
+                android:padding="8dp" />
+
+            <Switch
+                android:id="@+id/switchHaptics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vibration_feedback"
+                android:textColor="@color/text_main"
+                android:textSize="15sp"
+                android:checked="true"
+                android:padding="8dp" />
+
+            <Switch
+                android:id="@+id/switchSound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lock_sound"
+                android:textColor="@color/text_main"
+                android:textSize="15sp"
+                android:checked="true"
+                android:padding="8dp" />
+
+            <!-- Emergency Contact input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emergency_contact"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etEmergency"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="מספר לחירום (ברירת מחדל: 100)"
+                android:inputType="phone"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_muted"
+                android:background="@drawable/bg_card_rounded"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSavedIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/success_green"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
